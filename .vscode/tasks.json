@@ -1,0 +1,63 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Run Daily Audit (today)",
+      "type": "shell",
+      "command": "bash",
+      "args": [
+        "-lc",
+        "source .env && AUDIT_DATE=$(date +%F) python3 scripts/daily_live_audit.py"
+      ],
+      "options": { "cwd": "${workspaceFolder}" },
+      "problemMatcher": []
+    },
+    {
+      "label": "Run Daily Audit (custom date)",
+      "type": "shell",
+      "command": "bash",
+      "args": [
+        "-lc",
+        "source .env && AUDIT_DATE=${input:customDate} python3 scripts/daily_live_audit.py"
+      ],
+      "options": { "cwd": "${workspaceFolder}" },
+      "problemMatcher": []
+    },
+    {
+      "label": "Run Weekly Audit (current week)",
+      "type": "shell",
+      "command": "bash",
+      "args": [
+        "-lc",
+        "source .env && python3 scripts/weekly_lab_audit.py"
+      ],
+      "options": { "cwd": "${workspaceFolder}" },
+      "problemMatcher": []
+    },
+    {
+      "label": "Run Weekly Audit (custom week start)",
+      "type": "shell",
+      "command": "bash",
+      "args": [
+        "-lc",
+        "source .env && WEEK_START=${input:weekStart} python3 scripts/weekly_lab_audit.py"
+      ],
+      "options": { "cwd": "${workspaceFolder}" },
+      "problemMatcher": []
+    }
+  ],
+  "inputs": [
+    {
+      "id": "customDate",
+      "type": "promptString",
+      "description": "Enter AUDIT_DATE (YYYY-MM-DD)",
+      "default": "2025-09-08"
+    },
+    {
+      "id": "weekStart",
+      "type": "promptString",
+      "description": "Enter WEEK_START (YYYY-MM-DD, Monday)",
+      "default": "2025-09-08"
+    }
+  ]
+}

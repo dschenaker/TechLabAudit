@@ -1,0 +1,50 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Daily Audit (today)",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/scripts/daily_live_audit.py",
+      "console": "integratedTerminal",
+      "envFile": "${workspaceFolder}/.env",
+      "env": { "AUDIT_DATE": "${env:DATE}" }
+    },
+    {
+      "name": "Daily Audit (custom date)",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/scripts/daily_live_audit.py",
+      "console": "integratedTerminal",
+      "envFile": "${workspaceFolder}/.env",
+      "env": {
+        "AUDIT_DATE": "${input:customDate}"
+      }
+    },
+    {
+      "name": "Weekly Audit (custom week start)",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/scripts/weekly_lab_audit.py",
+      "console": "integratedTerminal",
+      "envFile": "${workspaceFolder}/.env",
+      "env": {
+        "WEEK_START": "${input:weekStart}"
+      }
+    }
+  ],
+  "inputs": [
+    {
+      "id": "customDate",
+      "type": "promptString",
+      "description": "Enter AUDIT_DATE (YYYY-MM-DD)",
+      "default": "2025-09-02"
+    },
+    {
+      "id": "weekStart",
+      "type": "promptString",
+      "description": "Enter WEEK_START (YYYY-MM-DD, usually Monday)",
+      "default": "2025-09-01"
+    }
+  ]
+}
