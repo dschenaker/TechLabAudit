@@ -1,6 +1,10 @@
 # Tech Lab Master Database — Audit System Wiki
 
-![Notion](./_assets/logo-notion.png) ![CYS](./_assets/logo-cys.png) ![MWR](./_assets/logo-mwr.png)
+<p align="center">
+  <img src="assets/logo-notion.png" alt="Notion" height="36">
+  <img src="assets/logo-cys.png" alt="CYS" height="36" style="margin:0 8px">
+  <img src="assets/logo-mwr.png" alt="MWR" height="36">
+</p>
 
 This Wiki documents the Tech Lab Master Database audit system: how to set it up, run daily/weekly audits, organize exports, and maintain the connection to Notion.
 
