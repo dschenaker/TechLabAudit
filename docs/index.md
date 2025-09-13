@@ -15,3 +15,14 @@ This Wiki documents the Tech Lab Master Database audit system: how to set it up,
 - [Command shortcuts & VS Code tasks](./shortcuts.md)
 - [Troubleshooting common errors](./troubleshooting.md)
 - [Maintenance & safe changes](./maintenance.md)
+# Tech Lab Audit Wiki
+
+Welcome to the Tech Lab Audit Wiki.  
+Here you’ll find setup instructions, daily and weekly reporting guides, troubleshooting tips, and resources.
+
+## Sections
+- [Setup Guide](setup.md)
+- [Running Daily Reports](run-daily.md)
+- [Running Weekly Reports](run-weekly.md)
+- [Troubleshooting](troubleshooting.md)
+- [Maintenance](maintenance.md)
